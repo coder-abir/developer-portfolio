@@ -6,6 +6,35 @@
   --color-bg: #fff8f3;
   --color-white: #ffffff;
   --font-secondary: #474747;
+  --color-tertiary: #757575;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar css */
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+  box-shadow: inset 0 0 5px var(--color-main);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-main);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-tertiary);
 }
 
 * {
@@ -49,7 +78,9 @@
   background-position: bottom right, 3%;
   height: 100vh;
   position: relative;
+  border-bottom: 5px solid var(--color-main);
 }
+
 /* Header & Navigation Style */
 
 nav {
@@ -67,6 +98,13 @@ nav ul {
 
 nav ul li {
   margin-right: 50px;
+}
+
+nav .icon{
+  display: none;
+  color: var(--color-main);
+  font-size: 30px;
+
 }
 
 .nav-branding {
@@ -89,12 +127,12 @@ nav ul button {
   width: 80%;
   margin: auto;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   height: 100%;
 }
-.wrapper{
-    vertical-align: middle;
+.wrapper {
+  vertical-align: middle;
 }
 .banner-subtitle {
   color: var(--font-secondary);
@@ -110,7 +148,7 @@ nav ul button {
 }
 
 .banner_text {
-  color: #757575;
+  color: var(--color-tertiary);
   font-size: 18px;
   line-height: 30px;
   font-weight: 400;
@@ -139,13 +177,12 @@ nav ul button {
   margin-right: 10px;
 }
 
-.bannerimage{
+.bannerimage {
   position: absolute;
   bottom: 0px;
   right: 0;
   margin-bottom: -5px;
 }
- 
 
 /* About Section Style */
 
@@ -153,7 +190,9 @@ nav ul button {
   margin: 130px 230px;
   background-color: var(--color-bg);
   border-radius: 10px;
-  padding: 130px 160px;
+  padding: 130px 250px;
+  padding-top: 50px;
+  border-bottom: 3px solid var(--color-main);
 }
 
 .about_info {
@@ -171,9 +210,9 @@ nav ul button {
 .about_info p {
   font-weight: 400;
   font-size: 18px;
-  line-height: 30px;
-  color: #757575;
-  margin-bottom: 30px;
+  line-height: 35px;
+  color: var(--color-tertiary);
+  margin-bottom: 50px;
 }
 
 .about_details {
@@ -186,7 +225,7 @@ nav ul button {
   font-weight: 400;
   line-height: 30px;
   font-size: 20px;
-  color: #757575;
+  color: var(--color-tertiary);
   margin-bottom: 10px;
 }
 
@@ -206,13 +245,13 @@ nav ul button {
   padding: 0px 160px;
 }
 .whatText h2 {
-  color: #181818;
+  color: var(--color-secondary);
   font-weight: 700;
   font-size: 35px;
   margin-bottom: 30px;
 }
 .whatText p {
-  color: #757575;
+  color: var(--color-tertiary);
   line-height: 30px;
   font-size: 18px;
 }
@@ -226,7 +265,7 @@ nav ul button {
 
 .card {
   padding: 30px;
-  background: #ffffff;
+  background: var(--color-white);
   box-shadow: 0px 6px 50px rgba(0, 0, 0, 0.06);
   border-radius: 5px;
   width: 20%;
@@ -245,7 +284,7 @@ nav ul button {
 }
 .card .cardText {
   line-height: 28px;
-  color: #757575;
+  color: var(--color-tertiary);
 }
 
 /* Summary Resume Style */
@@ -255,136 +294,134 @@ nav ul button {
 }
 
 .SummaryResume > h2 {
-  color: #181818;
+  color: var(--color-secondary);
   font-weight: 700;
   font-size: 35px;
   margin-bottom: 30px;
   text-align: center;
   margin-bottom: 110px;
 }
-.aligner{
-    display: flex;
+.aligner {
+  display: flex;
 }
-.SumExp{
-    margin-bottom: 30px;
+.SumExp {
+  margin-bottom: 30px;
 }
 
 .SumExp h2 {
-    font-size: 30px;
-    line-height: 41px;
-    color: #474747;
-    margin-bottom: 30px;
+  font-size: 30px;
+  line-height: 41px;
+  color: var(--font-secondary);
+  margin-bottom: 30px;
 }
 
 .SumExp h4 {
-    color: #474747;
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 34px;
-    margin-bottom: 10px;
+  color: var(--font-secondary);
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 34px;
+  margin-bottom: 10px;
 }
 
 .SumExp h5 {
-    font-size: 20px;
-    line-height: 27px;
-    font-weight: 600;
-    color: #757575;
-    margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 600;
+  color: var(--color-tertiary);
+  margin-bottom: 20px;
 }
 .SumExp p {
-    line-height: 28px;
-    color: #757575;
-    margin-bottom: 30px;
-    padding-right: 30px;
+  line-height: 28px;
+  color: var(--color-tertiary);
+  margin-bottom: 30px;
+  padding-right: 30px;
 }
 
-.SumExp .line{
-    border: 1px solid #fd6e0a; 
+.SumExp .line {
+  border: 1px solid var(--color-main);
 }
 
- 
-.education_area{
-    margin-right: 24px;
+.education_area {
+  margin-right: 24px;
 }
 
 /* Footer Style */
-.footer{
-    background-color: var(--color-bg);
-
+.footer {
+  background-color: var(--color-bg);
 }
-.footerWrapper{
-    display: flex;
-    padding: 130px 230px;
-    justify-content: space-between; 
+.footerWrapper {
+  display: flex;
+  padding: 130px 230px;
+  justify-content: space-between;
 }
-.connection{
-    width: 70%;
+.connection {
+  width: 70%;
 }
-.connection h2{
-    font-size: 35px;
-    font-weight: 700;
-    color: #181818;
-    line-height: 48px;
-    margin-bottom: 20px;
-}
-
-.connection p{
-    line-height: 28px;
-    color: #474747;
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 30px;
+.connection h2 {
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  line-height: 48px;
+  margin-bottom: 20px;
 }
 
-.footer .socialIcons{
-    display: flex;
-    width: 150px;
-    justify-content: space-between;
-}
-.MessageForm{
-    width: 40%;
-}
-.MessageForm h2{
-    font-size: 35px;
-    font-weight: 700;
-    color: #181818;
-    line-height: 48px;
-    margin-bottom: 20px;
+.connection p {
+  line-height: 28px;
+  color: var(--font-secondary);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
 
-.msgFrom input{ 
-    background-color: #ffffff;
-    border:none;
-    padding: 18px 30px;
-    outline: none;
-    margin-bottom: 24px;
-    display: block;
-    width: 100%;
-    border-radius: 5px;
-}  
-
-.msgFrom textarea{
-    background-color: #ffffff;
-    border:none;
-    padding: 18px 30px;
-    outline: none;
-    margin-bottom: 24px;
-    width: 100%;
-    resize: none;
-    border-radius: 5px;
+.footer .socialIcons {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+}
+.MessageForm {
+  width: 40%;
+}
+.MessageForm h2 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #181818;
+  line-height: 48px;
+  margin-bottom: 20px;
 }
 
-.submitBtn{
-    background-color: var(--color-main) !important;
-    height: 64px   !important;
-    font-size: 20px  !important; 
-    font-weight: 700 !important;
-    font-style: normal !important;
-    color: var(--color-white) !important;
-    border-radius: 5px !important;
-    border: 0 !important;
-    padding: 18px 35px !important;
-    cursor: pointer !important;
-    display: inline-block !important; 
-    width: auto !important; 
-} 
+.msgFrom input {
+  background-color: var(--color-white);
+  border: none;
+  padding: 18px 30px;
+  outline: none;
+  margin-bottom: 24px;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.msgFrom textarea {
+  background-color: var(--color-white);
+  border: none;
+  padding: 18px 30px;
+  outline: none;
+  margin-bottom: 24px;
+  width: 100%;
+  resize: none;
+  border-radius: 5px;
+}
+
+.submitBtn {
+  background-color: var(--color-main) !important;
+  height: 64px !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  color: var(--color-white) !important;
+  border-radius: 5px !important;
+  border: 0 !important;
+  padding: 18px 35px !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  width: auto !important;
+}

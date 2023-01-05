@@ -1,0 +1,111 @@
+@media only screen and (max-width: 1500px) {
+  /*about section  */
+  .about_details {
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  .about_details .detailsItem {
+    width: 45%;
+  }
+  /* skill cards */
+  .skillCards {
+    flex-wrap: wrap;
+  }
+  .skillCards .card {
+    width: 45%;
+    margin-bottom: 50px;
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  /* about section */
+  .about,
+  .whatido {
+    padding: 130px 60px;
+    margin: 70px 150px;
+  }
+
+  /* summary section */
+
+  .aligner {
+    flex-wrap: wrap;
+  }
+  /* footer */
+  .footerWrapper {
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    padding: 130px 60px;
+  }
+  .connection {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .MessageForm {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  /* banner */
+  .banner {
+    flex-direction: column;
+  }
+  .wrapper {
+    margin-top: 150px;
+  }
+  .banner_text {
+    width: 50%;
+  }
+  .header-btns {
+    flex-direction: column;
+  }
+  .btn-primary {
+    width: 40%;
+    margin-bottom: 5px;
+    justify-content: space-around;
+  }
+  .btn-outline {
+    margin-left: 0px !important;
+  }
+  .whatido {
+    margin: 0px 50px;
+    padding: 50px 60px;
+  }
+  .whatText {
+    padding: 0px;
+    margin-bottom: 50px;
+  }
+  .skillCards {
+    flex-direction: column;
+  }
+  .skillCards .card {
+    width: 100%;
+  }
+  .SummaryResume {
+    margin: 30px 100px;
+  }
+  .msgFrom .submitBtn {
+    display: block;
+    width: 100% !important;
+    margin-bottom: 0px;
+  }
+}
+
+
+@media only screen and (max-width: 750px){
+    .navLinks li:not(:last-child) , .navLinks button{
+        display: none; 
+    }
+    nav .icon{
+        display: block !important;
+    }
+    .btn_align .btn-primary{
+        width: 100% !important; 
+    }
+    .about{
+        padding:60px 60px;
+        margin:60px 60px;
+    }
+}
